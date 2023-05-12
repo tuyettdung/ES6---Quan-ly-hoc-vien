@@ -39,9 +39,29 @@ export class ListPerson {
     return false;
 }
 
+getInfoPerson(idPerson) {
+  let personEdit = this.arrPerson.find (person => person.id === idPerson);
+  return personEdit;
+}
+
+updatePerson(idPerson,personUpdate){
+  let personGet = this.getInfoPerson(idPerson);
+  if(personGet){
+      for(let key in personGet){
+          personGet[key] = personUpdate[key];
+      }
+      return true;
+  }
+  return false
+}
+
+filterTypePerson(value){
+  if(value !== 'all'){
+      this.arrPerson = this.arrPerson.filter(person => person.typeOption === value);
+  }
+  return this.arrPerson;
+
+}
 
 
-
-
-  
 }

@@ -18,7 +18,10 @@ export class Student extends Person {
 
 export class Employee extends Person {
     countDay = 0;
-    salary = 0
+    salary = 0;
+    totalSalary(){
+        return this.countDay*this.salary;
+    }
 
 }
 
@@ -28,3 +31,4 @@ export class Customer extends Person {
     evaluate = ''
 
 }
+

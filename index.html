@@ -126,7 +126,8 @@
 								<div class="input-group">
 									<input type="text" class="form-control" placeholder="Search" id="searchName">
 									<div class="input-group-prepend">
-										<span style="cursor: pointer;" class="input-group-text" id="btnTimNV"><i class="fa fa-search"></i></span>
+										<span style="cursor: pointer;" class="input-group-text" id="btnTimNV"><i
+												class="fa fa-search"></i></span>
 									</div>
 								</div>
 							</div>
@@ -136,15 +137,14 @@
 								<tr>
 									<th class="nowrap">
 										<span class="mr-1">ID</span>
-										<i class="fa fa-arrow-up" id="SapXepTang"></i>
-										<i class="fa fa-arrow-down" id="SapXepGiam"></i>
+										
 									</th>
 									<th>NAME</th>
 									<th>ADDRESS</th>
 									<th>EMAIL</th>
 									<th>TYPE</th>
-									<th>NOTE</th>									
-									
+									<th>NOTE</th>
+
 									<th><em class="fa fa-cog"></em></th>
 								</tr>
 							</thead>
@@ -194,9 +194,8 @@
 								<div class="input-group-prepend">
 									<span class="input-group-text"><i class="fa fa-user"></i></span>
 								</div>
-								<input type="text" name="id" id="id" class="form-control input-sm"
-									placeholder="ID">
-								
+								<input type="text" name="id" id="id" class="form-control input-sm" placeholder="ID">
+
 							</div>
 
 							<span class="sp-thongbao" id="tbId"></span>
@@ -244,9 +243,9 @@
 								</div>
 								<select class="form-control" id="typeOption">
 									<option>Type</option>
-									<option value="Student">Student</option>
-									<option value="Employee">Employee</option>
-									<option value="Customer">Customer</option>
+									<option value="student">Student</option>
+									<option value="employee">Employee</option>
+									<option value="customer">Customer</option>
 								</select>
 							</div>
 
@@ -254,7 +253,7 @@
 						</div>
 
 						<div class="form-group" id="optionForm">
-							
+
 						</div>
 
 					</form>
@@ -262,7 +261,7 @@
 
 				<!-- Modal footer -->
 				<div class="modal-footer" id="modal-footer">
-					<button id="btnAdd" type="button" class="btn btn-success" >Add to list</button>
+					<button id="btnAdd" type="button" class="btn btn-success">Add to list</button>
 					<button id="btnUpdate" type="button" class="btn btn-success">Update</button>
 					<button id="btnClose" type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
 				</div>
@@ -284,9 +283,9 @@
 	<script type="text/javascript" src="./assets/lib/bootstrap.min.js"></script>
 
 	<!-- Date Picker -->
-	<!-- <script src="js/jquery-ui.min.js"></script> -->
+
 	<script src="./assets/lib/jquery-ui.js"></script>
-	<script src="./assets/lib/datepicker.js"></script>
+
 
 	<script type="text/javascript">
 		$(document).ready(function () {
@@ -295,6 +294,11 @@
 			});
 		});
 	</script>
+
+	<!-- Lodash -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"
+		integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
 	<script type="module" src="./controllers/index.js"></script>
