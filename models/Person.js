@@ -11,16 +11,17 @@ export class Student extends Person {
     math = 0;
     physic  = 0;
     chemistry = 0;
-    totalScore(){
-        return ((this.math + this.physic + this.chemistry)/3).toLocaleString();
+    totalScore = function(){
+        let totalScore = Number(this.math) + Number(this.physic) + Number(this.chemistry);
+        return totalScore/3;
     }
 }
 
 export class Employee extends Person {
     countDay = 0;
     salary = 0;
-    totalSalary(){
-        return this.countDay*this.salary;
+    totalSalary = function(){
+        return Number(this.countDay)*Number(this.salary);
     }
 
 }
@@ -31,4 +32,6 @@ export class Customer extends Person {
     evaluate = ''
 
 }
+
+
 

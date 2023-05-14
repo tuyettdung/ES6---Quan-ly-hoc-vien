@@ -1,4 +1,4 @@
-import { Person } from "./Person.js";
+import { Employee, Person, Student } from "./Person.js";
 
 export class ListPerson {
   arrPerson = [];
@@ -10,19 +10,24 @@ export class ListPerson {
   renderListPerson(selector) {
     let trPerson = "";
     for (let person of this.arrPerson) {
-      let newPerson = new Person();
+      let newPerson = new Student();
       newPerson = { ...newPerson, ...person };
+      let personNew = new Employee();
+      personNew = { ...personNew, ...newPerson};
       trPerson += `
          <tr>
-           <td>${newPerson.id}</td>
-           <td>${newPerson.name}</td>
-           <td>${newPerson.address}</td>
-           <td>${newPerson.email}</td>
-           <td>${newPerson.typeOption}</td>
-           <td></td>
+           <td>${personNew.id}</td>
+           <td>${personNew.name}</td>
+           <td>${personNew.address}</td>
+           <td>${personNew.email}</td>
+           <td>${personNew.typeOption}</td>
+           <td>${personNew.totalScore().toLocaleString()}
+           </td>
+           <td>$${personNew.totalSalary().toLocaleString()}
+           </td>
            <td>
-           <button class="btn btn-danger" onclick="deletePerson('${newPerson.id}')">Xoá</button>
-           <button class="btn btn-primary" onclick="editPerson('${newPerson.id}')">Sửa</button>
+           <button class="btn btn-danger" onclick="deletePerson('${personNew.id}')">Xoá</button>
+           <button class="btn btn-primary" onclick="editPerson('${personNew.id}')">Sửa</button>
            </td>
          </tr>
         `;
@@ -56,9 +61,7 @@ updatePerson(idPerson,personUpdate){
 }
 
 filterTypePerson(value){
-  if(value !== 'all'){
       this.arrPerson = this.arrPerson.filter(person => person.typeOption === value);
-  }
   return this.arrPerson;
 
 }
